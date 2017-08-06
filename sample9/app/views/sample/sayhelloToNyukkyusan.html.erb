@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script>
+function doPost(){
+    var req = new XMLHttpRequest();
+    req.open('POST', 'http://localhost:3000/nikkyuusanpostasyn/', true);
+        req.setRequestHeader('content-type',
+        'application/x-www-form-urlencoded;charset=UTF-8');
+    req.send('name='+f('nikkyu').value);
+    req.onload =  r(req,
+        function(){f('result').innerText=req.responseText ;});
+}
+
+function r(req,caller){
+  return function (event){
+    if (req.readyState === 4 && req.status === 200) 
+      caller();
+  };
+}
+function f(str){
+    return document.getElementById(str);
+}
+</script>
+<body>
+<input type='text'id='nikkyu' size="100">
+<input type='button' onclick='doPost();' value="実行">
+<div id='result'></div>
+</html>
