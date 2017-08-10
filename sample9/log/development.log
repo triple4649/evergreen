@@ -9546,3 +9546,35 @@ Completed 200 OK in 845ms (Views: 828.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/async.self-2d244467230a2eb8a6cc425cb615af26b73970b220a83d0395a503124f610c9a.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:27:03 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 08:51:00 +0900
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/init_controller.rb:10:in `<main>'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1189.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (755.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2319.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 08:54:12 +0900
+
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  app/controllers/init_controller.rb:10:in `<main>'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (183.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 08:55:59 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 2215ms (Views: 2207.1ms | ActiveRecord: 0.0ms)

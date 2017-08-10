@@ -53,8 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'init#index'
   #get '/nikkyuusan/', to: 'sample#sayhelloToNyukkyusan'
   #post '/nikkyuusanpost/', to: 'sample#sayhellopost'
+  root 'init#index'
    
 end
