@@ -7,20 +7,8 @@
 #require_dependency "worddictionary"
 #require "db"
 
-class SampleController< ApplicationController
+class InitController< ApplicationController
 protect_from_forgery :expect  => ["create"]
-def sayhello
-     @msgToNikkyusan = '２９３、hello!';
-     @msgToPerorisan = 'ペロリさん、hello!';
-  end
-  #初期表示で呼ばれるメソッド
-  def sayhelloToNyukkyusan
-     @msgToNikkyusan = '２９３、hello!';
-  end
-    
-  #Ajaxから呼ばれるメソッド
-  def sayhelloasynpost
-    p params
-    render text:Worddictionary.belongs(params[:name])
-  end
+    def index
+    end
 end

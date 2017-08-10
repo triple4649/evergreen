@@ -53,13 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'sample#sayhello'
-  get '/nikkyuusan/', to: 'sample#sayhelloToNyukkyusan'
-  post '/nikkyuusanpost/', to: 'sample#sayhellopost'
-  post '/nikkyuusanpostasyn/', to: 'sample#sayhelloasynpost'
-  get '/dbexplain/init/', to: 'executeplan#init'
-  post '/dbexplain/get/', to: 'executeplan#getexecuteplan'
-  get '/exam/init/', to: 'exam#init'
-  post '/exam/register/', to: 'exam#register'
+  root 'init#index'
+  #get '/nikkyuusan/', to: 'sample#sayhelloToNyukkyusan'
+  #post '/nikkyuusanpost/', to: 'sample#sayhellopost'
    
 end

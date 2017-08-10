@@ -8356,3 +8356,1193 @@ Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6
 
 
 Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-06 16:26:47 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:12:38 +0900
+
+NameError (cannot load Java class org.sqlite.JDBC):
+  org/jruby/javasupport/JavaClass.java:286:in `for_name'
+  org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+  uri:classloader:/jruby/java/core_ext/object.rb:49:in `block in java_import'
+  org/jruby/RubyArray.java:2486:in `map'
+  uri:classloader:/jruby/java/core_ext/object.rb:36:in `java_import'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:24:in `block in driver_class'
+  org/jruby/RubyModule.java:2833:in `module_eval'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:23:in `block in driver_class'
+  org/jruby/javasupport/JavaObject.java:257:in `synchronized'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:20:in `driver_class'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:8:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:96:in `setup_jdbc_factory'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:59:in `setup_connection_factory'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:14:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/adapter.rb:76:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/adapter.rb:44:in `new'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection_methods.rb:12:in `jdbc_connection'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/sqlite3/connection_methods.rb:24:in `sqlite3_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.9) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.9) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.9) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.9) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (268.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:14:26 +0900
+
+NameError (cannot load Java class org.sqlite.JDBC):
+  org/jruby/javasupport/JavaClass.java:286:in `for_name'
+  org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+  uri:classloader:/jruby/java/core_ext/object.rb:49:in `block in java_import'
+  org/jruby/RubyArray.java:2486:in `map'
+  uri:classloader:/jruby/java/core_ext/object.rb:36:in `java_import'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:24:in `block in driver_class'
+  org/jruby/RubyModule.java:2833:in `module_eval'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:23:in `block in driver_class'
+  org/jruby/javasupport/JavaObject.java:257:in `synchronized'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:20:in `driver_class'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/driver.rb:8:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:96:in `setup_jdbc_factory'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:59:in `setup_connection_factory'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection.rb:14:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/adapter.rb:76:in `initialize'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/adapter.rb:44:in `new'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/jdbc/connection_methods.rb:12:in `jdbc_connection'
+  activerecord-jdbc-adapter (1.3.23) lib/arjdbc/sqlite3/connection_methods.rb:24:in `sqlite3_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.9) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.9) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.9) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.9) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (44.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1116.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:16:55 +0900
+
+ActionController::RoutingError (uninitialized constant InitController):
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (39.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (123.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (812.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1348.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:18:26 +0900
+
+ActionController::RoutingError (uninitialized constant InitController):
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (233.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:20:07 +0900
+
+ActionController::RoutingError (uninitialized constant InitController):
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (202.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:22:56 +0900
+
+SyntaxError (C:/jrubyrails/afternoon-garden-70542/sample9/app/controllers/init_controller.rb:13: syntax error, unexpected end-of-file
+):
+  app/controllers/init_controller.rb:13: syntax error, unexpected end-of-file
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (175.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:23:19 +0900
+
+LoadError (Unable to autoload constant InitController, expected C:/jrubyrails/afternoon-garden-70542/sample9/app/controllers/init_controller.rb to define it):
+  activesupport (4.2.9) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.9) lib/active_support/dependencies.rb:184:in `const_missing'
+  org/jruby/RubyModule.java:3285:in `const_get'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  org/jruby/RubyArray.java:1734:in `each'
+  org/jruby/RubyEnumerable.java:936:in `inject'
+  activesupport (4.2.9) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.9) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.9) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  org/jruby/RubyArray.java:1734:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (171.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:27:33 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Your template was not saved as valid UTF-8. Please either specify UTF-8 as the encoding for your template in your text editor, or mark the template with its encoding by inserting the following as the first line of the template:
+
+# encoding: <name of correct encoding>.
+
+The source of your template was:
+
+<html>
+	<link href="sample.css" rel="stylesheet" type="text/css">
+	<script src="sample.js"></script>
+    <script>
+        function closeView(str){_e(str).style.visibility = "hidden";}
+        function view(str){
+            _e(str).style.visibility = "visible";
+            divmove()
+        }
+        function _e(str){return document.getElementById(str)}
+    </script>
+	<!--header -->
+	<div style='position: absolute;width:1000px;height: 100px;border: solid 1px blue;top :0px;left:0px;background-color:#AC16CE;display: table;'>
+		<div style='display: table-cell;vertical-align: middle; padding:20px;'><span style='color:white;font-size:large'>TRIPLEのぺージ</span>
+			<div style=' padding:10px'><span style='color:white;font-size:small'>主にプログラミング、情報処理試験に関する話題を扱っています</span></div>
+		</div>
+	</div>
+	<!--left サイトメニュー-->
+	<div style='position: absolute;width:250px;border: solid 1px red;top :120px;left:0px;padding:10px'>
+		・最近思ったこと<br>
+		<div style='height:5px'></div>
+
+		・プログラミング<br>
+		<div style='padding-left:15px;'>
+		<span style='font-size:small'>
+		・<a href='javascript:view("programing")'>Ruby(Ruby On Rails)</a><br>
+		・Java<br>
+		・JavaScript<br>
+		・Groovy<br>
+		・Oracle<br>
+		</span>
+		</div>
+		<div style='height:5px'></div>
+
+		・情報処理試験<br>
+		<div style='padding-left :15px'>
+		<span style='font-size:small'>
+		・PM<br>
+		・ITサービスマネージャー<br>
+		・セキュリティスペシャリスト<br>
+		・システムアーキテスト<br>
+		・DBスペシャリスト<br>
+		</span>
+		</div>
+		<div style='height:5px'></div>
+
+		・外部リンク<br>
+		<div style='padding-left :15px'>
+		<span style='font-size:small'>
+		・ブログ<br>
+		・Qiita<br>
+		</span>
+		</div>
+	</div>
+	<!--right コンテンツ（最近思ったこと)-->
+	<div style='position: absolute;width:750px;height: 200px;top :120px;left:270px;padding:10px'>
+	＜最近思ったこと＞<br>
+	<hr>
+	・2017年8月10日<br>
+	<p>現場のくそコードをメンテしていると、自分が何をやっているだろうとむなしくなることがあります</p>
+	<hr>
+	<p>＜＜前日 翌日＞＞
+	</div>
+	<!--・プログラミング -->
+	<div class ='drag-and-drop' style='position: absolute;width:500px;border: solid 1px red;top :50px;left:10px;padding:10px;visibility:hidden;background-color:white' id='programing'>
+	・プログラミング＞Ruby<br>
+	<a href='http://qiita.com/triple4649/items/8c1caac649342d3b10a3' target='blank'>Windows環境でRubyの実行環境を構築する</a><br>
+	<a href='http://qiita.com/triple4649/items/8829c5c4acbb4a2b2a2a' target='blank'>Windows環境でのRubyの環境構築は時間コストがかかりすぎる</a><br>
+	<a href='javascript:closeView("programing")'>閉じる
+	</div>
+
+</html>
+):
+  actionview (4.2.9) lib/action_view/template/handlers/erb.rb:140:in `valid_encoding'
+  actionview (4.2.9) lib/action_view/template/handlers/erb.rb:114:in `call'
+  actionview (4.2.9) lib/action_view/template.rb:270:in `compile'
+  actionview (4.2.9) lib/action_view/template.rb:245:in `block in compile!'
+  activesupport (4.2.9) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.9) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.9) lib/action_view/template.rb:244:in `block in compile!'
+  org/jruby/ext/thread/Mutex.java:148:in `synchronize'
+  actionview (4.2.9) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.9) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.9) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.9) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.9) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.2.9) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.9) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.9) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.9) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.9) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.9) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.9) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.9) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.9) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  activesupport (4.2.9) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/benchmark.rb:308:in `realtime'
+  activesupport (4.2.9) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.9) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.9) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.9) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:555:in `block in compile'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.9) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.9) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  org/jruby/RubyArray.java:1734:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:140:in `service'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/httpserver.rb:96:in `run'
+  C:/jruby-9.1.12.0/lib/ruby/stdlib/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (145.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:29:05 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 1328ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1056495166_2258'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:29:50 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1056495166_2258'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:31:22 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 389ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1056495166_2258'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:32:56 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1056495166_2258'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:34:42 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (63.0ms)
+Completed 500 Internal Server Error in 3549ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (40.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (219.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:36:48 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.0ms)
+
+
+Started GET "/exam/init/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:37:12 +0900
+Processing by ExamController#init as HTML
+  Rendered exam/init.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.0ms)
+
+
+Started GET "/exam/init/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:41:52 +0900
+Processing by ExamController#init as HTML
+  Rendered exam/init.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:41:57 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (120.0ms)
+
+
+Started GET "/nikkyuusan/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:44:48 +0900
+Processing by SampleController#sayhelloToNyukkyusan as HTML
+  Rendered sample/sayhelloToNyukkyusan.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1740464742_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.0ms)
+
+
+Started GET "/nikkyuusan/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:51:56 +0900
+Processing by SampleController#sayhelloToNyukkyusan as HTML
+  Rendered sample/sayhelloToNyukkyusan.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 1352ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___956276192_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (177.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:57:51 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 1586ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1038667092_2046'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (146.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:58:45 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 443ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1038667092_2046'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-10 23:59:35 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 1308ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___438947847_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (143.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:00:31 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (invalid byte sequence in UTF-8):
+    2: <html>
+    3: <head>
+    4:   <title>Sample9</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___438947847_2048'
+
+
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (34.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered C:/jruby-9.1.12.0/lib/ruby/gems/shared/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (137.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:02:06 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1152ms (Views: 1134.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/async.self-e32b08925f066e61e2bf7a2281932043cbe2d03846d348bf2a5c7c93ef794f00.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:02:08 +0900
+
+
+Started GET "/assets/animation.self-d18b07c17a06904196e89df30e118c5fd478063c9822131d8e2cce6d85cf3b60.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:02:08 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:02:26 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 463ms (Views: 456.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sample.self-c68075491d7780543c4001059824da18b72c3ba64943da2347431a1ee6df6da9.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:02:26 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:09:38 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 493ms (Views: 486.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.self-edbfdb41ccd6fa49390fc2d1970a690f8d40612690997b1209d3471fffdfc0ca.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:09:39 +0900
+
+
+Started GET "/assets/async.self-7be29792b20cec16b5f66bd6b0a42de6f6182e5000dd22c651fc289f894ffb62.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:09:39 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:10:05 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 190ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:10:19 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 200ms (Views: 192.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:11:00 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 197ms (Views: 193.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:11:50 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 2370ms (Views: 1821.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:12:15 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 264ms (Views: 257.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:12:51 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 298ms (Views: 293.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:13:05 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 235ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:13:20 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 253ms (Views: 242.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:14:30 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 230ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:14:48 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 198ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:08 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 224ms (Views: 213.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:14 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 191ms (Views: 185.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:26 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 180ms (Views: 174.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:49 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 273ms (Views: 269.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sample.self-c68075491d7780543c4001059824da18b72c3ba64943da2347431a1ee6df6da9.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/animation.self-d18b07c17a06904196e89df30e118c5fd478063c9822131d8e2cce6d85cf3b60.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/async.self-7be29792b20cec16b5f66bd6b0a42de6f6182e5000dd22c651fc289f894ffb62.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/index.self-edbfdb41ccd6fa49390fc2d1970a690f8d40612690997b1209d3471fffdfc0ca.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:15:50 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:27 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 140ms (Views: 132.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sample.self-c68075491d7780543c4001059824da18b72c3ba64943da2347431a1ee6df6da9.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/animation.self-d18b07c17a06904196e89df30e118c5fd478063c9822131d8e2cce6d85cf3b60.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/async.self-7be29792b20cec16b5f66bd6b0a42de6f6182e5000dd22c651fc289f894ffb62.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/index.self-edbfdb41ccd6fa49390fc2d1970a690f8d40612690997b1209d3471fffdfc0ca.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:28 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:55 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 130ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sample.self-c68075491d7780543c4001059824da18b72c3ba64943da2347431a1ee6df6da9.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/animation.self-d18b07c17a06904196e89df30e118c5fd478063c9822131d8e2cce6d85cf3b60.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/async.self-7be29792b20cec16b5f66bd6b0a42de6f6182e5000dd22c651fc289f894ffb62.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/index.self-edbfdb41ccd6fa49390fc2d1970a690f8d40612690997b1209d3471fffdfc0ca.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:17:56 +0900
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:18:35 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 137ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:23:29 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 170ms (Views: 165.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:26:17 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 1581ms (Views: 1115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:27:02 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 845ms (Views: 828.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/async.self-2d244467230a2eb8a6cc425cb615af26b73970b220a83d0395a503124f610c9a.js?body=1" for 0:0:0:0:0:0:0:1 at 2017-08-11 00:27:03 +0900
