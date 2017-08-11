@@ -9578,3 +9578,15 @@ Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 08:55:59 +0900
 Processing by InitController#index as HTML
   Rendered init/index.html.erb within layouts/application (6.0ms)
 Completed 200 OK in 2215ms (Views: 2207.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 09:07:25 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 1742ms (Views: 1133.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 0:0:0:0:0:0:0:1 at 2017-08-11 09:15:52 +0900
+Processing by InitController#index as HTML
+  Rendered init/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 485ms (Views: 476.5ms | ActiveRecord: 0.0ms)
