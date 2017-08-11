@@ -1,64 +1,147 @@
 <%# coding: UTF-8 %>
 <!DOCTYPE html>
-<html>
-    <!--header -->
-    <div style='position: absolute;width:1100px;height:85px;border: solid 1px blue;top :0px;left:0px;background-color:#AC16CE;display: table;'>
-        <div style='display: table-cell;vertical-align: middle; padding:15px;'><span style='color:white;font-size:large'>TRIPLEのぺージ</span>
-            <div style=' padding:10px'><span style='color:white;font-size:small'>コンピュータサイエンスメイン、たまに個人的な趣味を書いています</span></div>
-        </div>
+<!--header -->
+<div style='position: absolute;width:1100px;height:85px;border: solid 1px blue;top :0px;left:5px;background-color:#AC16CE;display: table;'>
+    <div style='display: table-cell;vertical-align: middle; padding:15px;'>
+    <div style=' padding-left:20px'>
+    <span style='color:white;font-size:x-large;font-family:Noto Sans Japanese'>
+    Flying 29!
+    </span>
     </div>
-    <!--left サイトメニュー-->
-    <div style='position: absolute;width:225px;border: solid 1px red;top :120px;left:0px;padding:10px'>
-        ・最近思ったこと<br>
-        <div style='height:5px'></div>
-
-        ・プログラミング<br>
-        <div style='padding-left:15px;'>
-        <span style='font-size:small'>
-        ・<a href='javascript:view("programing")'>Ruby(Ruby On Rails)</a><br>
-        ・Java<br>
-        ・JavaScript<br>
-        ・Groovy<br>
-        ・Oracle<br>
-        </span>
-        </div>
-        <div style='height:5px'></div>
-
-        ・情報処理試験<br>
-        <div style='padding-left :15px'>
-        <span style='font-size:small'>
-        ・PM<br>
-        ・ITサービスマネージャー<br>
-        ・セキュリティスペシャリスト<br>
-        ・システムアーキテスト<br>
-        ・DBスペシャリスト<br>
-        </span>
-        </div>
-        <div style='height:5px'></div>
-
-        ・外部リンク<br>
-        <div style='padding-left :15px'>
-        <span style='font-size:small'>
-        ・ブログ<br>
-        ・Qiita<br>
-        </span>
-        </div>
+        <div style=' padding-left:60px'><span style='color:white;font-size:small'>コンピュータサイエンスメイン、たまに個人的な趣味を書いています</span></div>
     </div>
-    <!--right コンテンツ（最近思ったこと)-->
-    <div style='position: absolute;width:750px;height: 200px;top :120px;left:270px;padding:10px'>
-    ＜最近思ったこと＞<br>
-    <hr>
-    ・2017年8月10日<br>
-    <p>現場のくそコードをメンテしていると、自分が何をやっているだろうとむなしくなることがあります</p>
-    <hr>
-    <p>＜＜前日 翌日＞＞
-    </div>
-    <!--・プログラミング -->
-    <div class ='drag-and-drop' style='position: absolute;width:500px;border: solid 1px red;top :50px;left:10px;padding:10px;visibility:hidden;background-color:white' id='programing'>
-    ・プログラミング＞Ruby<br>
-    <a href='http://qiita.com/triple4649/items/8c1caac649342d3b10a3' target='blank'>Windows環境でRubyの実行環境を構築する</a><br>
-    <a href='http://qiita.com/triple4649/items/8829c5c4acbb4a2b2a2a' target='blank'>Windows環境でのRubyの環境構築は時間コストがかかりすぎる</a><br>
-    <a href='javascript:closeView("programing")'>閉じる
-    </div>
+</div>
+<!--left サイトメニュー-->
+<div style='position: absolute;width:225px;height: 480px;border: solid 1px red;top :100px;left:5px;padding:10px'>
+    ・最近思ったこと<br>
+    <div style='height:5px'></div>
 
-</html>
+    ・プログラミング<br>
+    <div style='padding-left:15px;'>
+    <span style='font-size:small'>
+    ・<a href='javascript:view("programing")'>Ruby(Ruby On Rails)</a><br>
+    ・Java<br>
+    ・JavaScript<br>
+    ・Groovy<br>
+    ・Oracle<br>
+    </span>
+    </div>
+    <div style='height:5px'></div>
+
+    ・情報処理試験<br>
+    <div style='padding-left :15px'>
+    <span style='font-size:small'>
+    ・PM<br>
+    ・ITサービスマネージャー<br>
+    ・セキュリティスペシャリスト<br>
+    ・システムアーキテスト<br>
+    ・DBスペシャリスト<br>
+    </span>
+    </div>
+    <div style='height:5px'></div>
+
+    ・外部リンク<br>
+    <div style='padding-left :15px'>
+    <span style='font-size:small'>
+    ・ブログ<br>
+    ・Qiita<br>
+    </span>
+    </div>
+</div>
+<!--right コンテンツ（最近思ったこと)-->
+<div style='position: absolute;width:750px;height: 500px;top :100px;left:270px;padding:10px'>
+＜最近思ったこと＞<br>
+<hr>
+・2017年8月11日 Ruby On Railsではまった<br>
+<div style='padding:10px'>
+ <span style='font-size:small'>
+ Ruby On RailsのモジュールをHerokuにデプロイするとき、JavaScriptのプリコンパイルでエラーが発生した<br>
+ Ruby On Rails以外のWebFreamworkを使っている人からみたら、<br>
+ 「JavaScriptなんて単なる静的ファイルで、適当なディレクトリに置けばいいんだろ？」<br>
+ というかもだが、最近のJavaScriptはライブラリが肥大化しているためか、はたまたJavaScriptを直接扱うのが効率が悪いためなのか、コンパイルしてJavaScriptファイルを生成させる言語を使うのが主流らしい<br>
+ Railsはその流れを作ったアプリのため、デプロイ時にJavaScriptファイルのプリコンパイルを必要とする<br>
+ 個人的にはそういうコンパイルしてJavaScriptファイルを生成する言語は使わないで、極論すればRailsのJavaScriptのプリコンパイルなんてあってもなくてもいいんだが、プリコンパイル時にHTMLにJavaScriptのヘッダファイルを差し込んでくれるのが便利なので結局、プリコンパイル機能を使っています。<br>
+ 閑話休題<br>
+
+ プリコンパイル時のエラーは<br>
+ config/environments/production.rbのconfig.assets.js_compressor = :uglifierをコメントアウトすることで回避した<br>
+ Web上の日本語のサイトにはこの情報が出てきていないので、メモがてら書いておく
+ </span>
+</div>
+<hr>
+<p>＜＜前日 翌日＞＞
+</div>
+<!--・プログラミング -->
+<div class ='drag-and-drop' style='border: solid 1px black;position: absolute;width:500px;top :50px;left:10px;padding:10px;visibility:hidden;background-color:white' id='programing'>
+・プログラミング＞Ruby<br>
+    <div style='border: solid 1px red;padding:2px'>
+        <p style='font-size:small;padding:0px'>・<a href='http://qiita.com/triple4649/items/8c1caac649342d3b10a3' target='blank'>Windows環境でRubyの実行環境を構築する</a></p>
+        <p style='font-size:small;padding:0px'>・<a href='http://qiita.com/triple4649/items/8829c5c4acbb4a2b2a2a' target='blank'>Windows環境でのRubyの環境構築は時間コストがかかりすぎる</a></p>
+        <p style='font-size:small;padding:0px'>・<a href='http://qiita.com/triple4649/items/ecfa5e8c2604e5045e2b' target='blank'>WindowsでRails環境を構築する</a></p>
+        <p style='font-size:small;padding:0px'>・<a href='http://qiita.com/triple4649/items/7e16212be201d5c87e78' target='blank'>Ruby on Railsのルーティングについて</a></p>
+        <div style='padding:5px'><p style='font-size:small;padding:0px'>＜前の5件 次の5件＞</p></div>
+     </div>
+    <div style='padding:5px'></div>
+    <div style='padding-left:400px'><a href='javascript:closeView("programing")'>閉じる</a></div>
+</div>
+<div style='position: absolute;width:1100px;height:85px;border: solid 1px blue;top :620px;left:5px;background-color:#AC16CE;display: table;padding:5px'>
+    <div style='display: table-cell;vertical-align: top;width:55px'><span style='color:white'>おすすめ</span></div>
+    <div style='display: table-cell;vertical-align: middle;width:200px'>
+        <table border="0" cellspacing="0" cellpadding="0" class="amazon-aff">
+        <tr>
+        <td rowspan="4">
+        <a href="https://www.amazon.co.jp/%E5%A2%97%E8%A3%9C%E6%94%B9%E8%A8%82%E7%89%88-Java%E8%A8%80%E8%AA%9E%E3%81%A7%E5%AD%A6%E3%81%B6%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%85%A5%E9%96%80-%E7%B5%90%E5%9F%8E-%E6%B5%A9-ebook/dp/B00I8ATHGW?SubscriptionId=AKIAIRNYLEHVWKXBWIKA&tag=studyroom09-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00I8ATHGW" style="text-decoration:none;" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/41mh5r0NwLL._SL75_.jpg" title="クリエーター情報なし" border="0"></a></td><td><a href="https://www.amazon.co.jp/%E5%A2%97%E8%A3%9C%E6%94%B9%E8%A8%82%E7%89%88-Java%E8%A8%80%E8%AA%9E%E3%81%A7%E5%AD%A6%E3%81%B6%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%85%A5%E9%96%80-%E7%B5%90%E5%9F%8E-%E6%B5%A9-ebook/dp/B00I8ATHGW?SubscriptionId=AKIAIRNYLEHVWKXBWIKA&tag=studyroom09-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00I8ATHGW" style="text-decoration:none;" target="_blank"></a>
+        </td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>増補改訂版<br> Java言語で学ぶデザインパターン入門</span></td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>クリエーター情報なし</span></td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>SBクリエイティブ</span></td>
+        </tr>
+        </table>
+     </div>
+    <div style='display: table-cell;vertical-align: middle;width:200px'>
+        <table border="0" cellspacing="0" cellpadding="0" class="amazon-aff">
+        <tr>
+        <td rowspan="4">
+        <a href="https://www.amazon.co.jp/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AF%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%81%8B-10%E5%B9%B4%E5%BE%8C%E3%80%8120%E5%B9%B4%E5%BE%8C%E3%81%BE%E3%81%A7%E5%BF%85%E3%81%9A%E5%BD%B9%E7%AB%8B%E3%81%A4%E6%A0%B9%E3%81%A3%E3%81%93%E3%81%AE%E9%83%A8%E5%88%86%E3%81%8C%E3%81%8D%E3%81%A3%E3%81%A1%E3%82%8A%E3%82%8F%E3%81%8B%E3%82%8B%EF%BC%81-%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%EF%BD%A5%E3%82%A2%E3%82%A4%E6%96%B0%E6%9B%B8-%E6%A2%85%E6%B4%A5-%E4%BF%A1%E5%B9%B8/dp/4797339497?SubscriptionId=AKIAIRNYLEHVWKXBWIKA&tag=studyroom09-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=4797339497" style="text-decoration:none;" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51W3fP3Q%2BtL._SL75_.jpg" title="クリエーター情報なし" border="0"></a>
+        </td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>あなたはコンピュータを理解していますか? <br>
+        10年後、20年後まで必ず役立つ根っこの部分がきっちりわかる！ (サイエンス･アイ新書)</span>
+        </td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>クリエーター情報なし</span></td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>ソフトバンク クリエイティブ</span></td>
+        </tr>
+        </table>
+    </div>
+    <div style='display: table-cell;vertical-align: middle;width:200px'>
+        <table border="0" cellspacing="0" cellpadding="0" class="amazon-aff">
+        <tr>
+        <td rowspan="4">
+        <a href="https://www.amazon.co.jp/%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%AB%E3%83%95%E7%89%A9%E8%AA%9EIII-%E6%96%B0%E5%A4%A9%E5%9C%B0%E3%80%81%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B4%E3%83%88%E3%83%B3%E3%83%BB%E3%83%AC%E3%83%AB%E3%83%A0-R-%E3%82%B5%E3%83%AB%E3%83%90%E3%83%88%E3%83%BC%E3%83%AC/dp/475771517X?SubscriptionId=AKIAIRNYLEHVWKXBWIKA&tag=studyroom09-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=475771517X" style="text-decoration:none;" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/512QFTFGNYL._SL75_.jpg" title="クリエーター情報なし" border="0"></a></td><td><a href="https://www.amazon.co.jp/%E3%83%80%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%AB%E3%83%95%E7%89%A9%E8%AA%9EIII-%E6%96%B0%E5%A4%A9%E5%9C%B0%E3%80%81%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B4%E3%83%88%E3%83%B3%E3%83%BB%E3%83%AC%E3%83%AB%E3%83%A0-R-%E3%82%B5%E3%83%AB%E3%83%90%E3%83%88%E3%83%BC%E3%83%AC/dp/475771517X?SubscriptionId=AKIAIRNYLEHVWKXBWIKA&tag=studyroom09-22&linkCode=xm2&camp=2025&creative=165953&creativeASIN=475771517X" style="text-decoration:none;" target="_blank"></a>
+        </td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>ダークエルフ物語III<br> 新天地、フォーゴトン・レルム</span>
+        </td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>クリエーター情報なし</span></td>
+        </tr>
+        <tr>
+        <td><span style='color:white;font-size:small'>エンターブレイン</span></td>
+        </tr>
+        </table>
+    </div>
+</div>
+
