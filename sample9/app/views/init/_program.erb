@@ -1,0 +1,30 @@
+・プログラミング＞ <%= @lang_ %> <br>
+    <div style='border: solid 1px red;padding:2px'>
+        <% @ProgrameContents[0..4].each do |x| %> 
+            <p style='font-size:small;padding:0px'>
+            <%= link_to "#{x.title}", "#{x.url}" ,:target => "_blank"%>
+            </p>
+        <% end %> 
+        <div style='padding:5px'>
+            <p style='font-size:small;padding:0px'>
+            <% url = <<-EOS
+               javascript:view('/showprograming/',"#{@lang_}",'programing' ,"#{@presentpage-5}")
+               EOS
+            if (@isbefore) then %>
+                <%= link_to "＜前の5件", url %>
+            <% else %>
+                 ＜前の5件
+            <% end %>
+            <% url = <<-EOS
+               javascript:view('/showprograming/',"#{@lang_}",'programing' ,"#{@presentpage+5}")
+               EOS
+            if (@isnext) then %> 
+                <%= link_to "次の5件＞", url %>
+            <% else %>
+                 次の5件＞
+            <% end %>
+            </p>
+        </div>
+     </div>
+    <div style='padding:5px'></div>
+    <div style='padding-left:400px'><a href='javascript:closeView("programing")'>閉じる</a></div>

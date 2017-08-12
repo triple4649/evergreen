@@ -9,6 +9,6 @@
 <body>
 
 <%= yield %>
-
+<input type='hidden' id='_hostname' value='<%= request.url%>'>
 </body>
 </html>

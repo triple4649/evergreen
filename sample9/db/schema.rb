@@ -11,6 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170811111739) do
+
+  create_table "diaries", force: :cascade do |t|
+    t.text     "contents"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "program_contents", force: :cascade do |t|
+    t.text     "url"
+    t.string   "cotent"
+    t.string   "record_type"
+    t.string   "title"
+    t.decimal  "c_order",     precision: 3, scale: 3
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
 
 end

@@ -1,11 +1,5 @@
-var host = "http://localhost:3000/exam/register/;"
-function doPost() {
-    var id = Math.floor(Math.random() * 1000000)
-    var param = _g()
-    .concat(
-       [`id#1=${id}`])
-    .join('&')
-    commute(host, param)
+function doPost(path,param) {
+    commute(_f("_hostname")+path, param)
 }
 
 function commute(url, param) {
@@ -16,7 +10,7 @@ function commute(url, param) {
     console.log(param)
     req.send(param);
     req.onload = _r(req,
-        function () { _t('display', req.responseText); });
+        function () { _t('programing', req.responseText);});
 }
 
 function _r(req, caller) {
@@ -31,7 +25,7 @@ function _f(str) {
 }
 
 function _t(str, text) {
-    return document.getElementById(str).innerText = text;
+    return document.getElementById(str).innerHTML = text;
 }
 
 function _k(str) {
