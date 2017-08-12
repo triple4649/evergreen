@@ -5,7 +5,7 @@ class CreateProgramContents < ActiveRecord::Migration
       t.string :cotent
       t.string :record_type
       t.string :title
-      t.decimal:c_order , precision: 3, scale: 3 
+      t.decimal:c_order , precision: 6, scale: 3 
 
       t.timestamps null: false
     end
