@@ -54,6 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   #get '/nikkyuusan/', to: 'sample#sayhelloToNyukkyusan'
+  get  '/diaryregister/show/',  to: 'registerdiary#show'
+  post '/diaryregister/comfirm/',  to: 'registerdiary#comfirm'
+  post '/diaryregister/register/',  to: 'registerdiary#register'
   post '/showprograming/', to: 'init#showprograming'
   root 'init#index'
    

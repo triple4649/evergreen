@@ -1,7 +1,7 @@
 <%# coding: UTF-8 %>
 <!DOCTYPE html>
 <!--header -->
-<div style='position: absolute;width:1100px;height:85px;border: solid 1px blue;top :0px;left:5px;background-color:#AC16CE;display: table;'>
+<div style='position: absolute;width:1050px;height:85px;border: solid 1px blue;top :0px;left:5px;background-color:#AC16CE;display: table;'>
     <div style='display: table-cell;vertical-align: middle; padding:15px;'>
     <div style=' padding-left:20px'>
     <span style='color:white;font-size:x-large;font-family:Noto Sans Japanese'>
@@ -12,7 +12,7 @@
     </div>
 </div>
 <!--left サイトメニュー-->
-<div style='position: absolute;width:225px;height: 480px;border: solid 1px red;top :100px;left:5px;padding:10px'>
+<div style='position: absolute;width:225px;height: 580px;border: solid 1px red;top :100px;left:5px;padding:10px'>
     ・最近思ったこと<br>
     <div style='height:5px'></div>
 
@@ -51,32 +51,16 @@
     </div>
 </div>
 <!--right コンテンツ（最近思ったこと)-->
-<div style='position: absolute;width:750px;height: 500px;top :100px;left:270px;padding:10px'>
-＜最近思ったこと＞<br>
+<div style='position: absolute;width:750px;height: 580px;top :100px;left:270px;padding:10px;border-radius: 20px;border: solid 1px blue;'>
+＜最近思ったこと＞
 <hr>
-・2017年8月11日 Ruby On Railsではまった<br>
-<div style='padding:10px'>
- <span style='font-size:small'>
- Ruby On RailsのモジュールをHerokuにデプロイするとき、JavaScriptのプリコンパイルでエラーが発生した<br>
- Ruby On Rails以外のWebFreamworkを使っている人からみたら、<br>
- 「JavaScriptなんて単なる静的ファイルで、適当なディレクトリに置けばいいんだろ？」<br>
- というかもだが、最近のJavaScriptはライブラリが肥大化しているためか、はたまたJavaScriptを直接扱うのが効率が悪いためなのか、コンパイルしてJavaScriptファイルを生成させる言語を使うのが主流らしい<br>
- Railsはその流れを作ったアプリのため、デプロイ時にJavaScriptファイルのプリコンパイルを必要とする<br>
- 個人的にはそういうコンパイルしてJavaScriptファイルを生成する言語は使わないで、極論すればRailsのJavaScriptのプリコンパイルなんてあってもなくてもいいんだが、プリコンパイル時にHTMLにJavaScriptのヘッダファイルを差し込んでくれるのが便利なので結局、プリコンパイル機能を使っています。<br>
- 閑話休題<br>
-
- プリコンパイル時のエラーは<br>
- config/environments/production.rbのconfig.assets.js_compressor = :uglifierをコメントアウトすることで回避した<br>
- Web上の日本語のサイトにはこの情報が出てきていないので、メモがてら書いておく
- </span>
-</div>
+    <div style='' id='diary'>
+    <%= @diray_content %>
+    </div>
 <hr>
 <p>＜＜前日 翌日＞＞
 </div>
-<!--・プログラミング -->
-<div class ='drag-and-drop' style='border: solid 1px black;position: absolute;width:500px;top :50px;left:10px;padding:10px;visibility:hidden;background-color:white' id='programing'>
-</div>
-<div style='position: absolute;width:1100px;height:85px;border: solid 1px blue;top :620px;left:5px;background-color:#AC16CE;display: table;padding:5px'>
+<div style='position: absolute;width:1050px;height:85px;border: solid 1px blue;top :720px;left:5px;background-color:#AC16CE;display: table;padding:5px'>
     <div style='display: table-cell;vertical-align: top;width:55px'><span style='color:white'>おすすめ</span></div>
     <div style='display: table-cell;vertical-align: middle;width:200px'>
         <table border="0" cellspacing="0" cellpadding="0" class="amazon-aff">
@@ -135,4 +119,7 @@
         </tr>
         </table>
     </div>
+</div>
+<!--・プログラミング -->
+<div class ='drag-and-drop' style='border: solid 1px black;position: absolute;width:500px;height:320px;top :50px;left:10px;padding:10px;visibility:hidden;background-color:white' id='programing'>
 </div>

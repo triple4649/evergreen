@@ -1,8 +1,8 @@
-function doPost(path,param) {
-    commute(_f("_hostname")+path, param)
+function doPost(path,param,callbackid) {
+    commute(_f("_hostname")+path, param,callbackid)
 }
 
-function commute(url, param) {
+function commute(url, param,callbackid) {
     var req = new XMLHttpRequest();
     req.open('POST', url, true);
     req.setRequestHeader('content-type',
@@ -10,7 +10,7 @@ function commute(url, param) {
     console.log(param)
     req.send(param);
     req.onload = _r(req,
-        function () { _t('programing', req.responseText);});
+        function () { _t(callbackid, req.responseText);});
 }
 
 function _r(req, caller) {

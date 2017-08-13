@@ -1,12 +1,14 @@
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
-#require_dependency "worddictionary"
-#require "db"
+require 'kramdown'
 
 class InitController< ApplicationController
 protect_from_forgery :expect  => ["create"]
     def index
+         @diray_content=Kramdown::Document
+         .new(Diary.first.contents)
+         .to_html.html_safe
     end
 
     def showprograming
@@ -23,9 +25,6 @@ protect_from_forgery :expect  => ["create"]
         @lang_=params[:lang]
         @isbefore=(size>0)
         @isnext=@ProgrameContents.length>5
-        
-        puts "要素数 #{@ProgrameContents.length}"
-        @ProgrameContents.each {|x| puts x}
         @presentpage=size
     end
 end
