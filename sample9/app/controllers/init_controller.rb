@@ -7,7 +7,7 @@ class InitController< ApplicationController
 protect_from_forgery :expect  => ["create"]
     def index
          @diray_content=Kramdown::Document
-         .new(Diary.first.contents)
+         .new(Diary.last.contents)
          .to_html.html_safe
     end
 
