@@ -25,7 +25,11 @@ function _f(str) {
 }
 
 function _t(str, text) {
-    return document.getElementById(str).innerHTML = text;
+    if(document.getElementById(str).innerHTML){
+        document.getElementById(str).innerHTML = text;
+    }else{
+        document.getElementById(str).value = text;
+    }
 }
 
 function _k(str) {

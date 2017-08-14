@@ -1,0 +1,26 @@
+<div style='padding:10px;display:table'>
+<!--選択 -->
+    <div style='border: solid 1px red;padding:2px;width:600px;height:600px;padding:10px;display:table-cell;vertical-align:top'>
+        <% @diaries.each do |x|
+           url = <<-EOS
+           javascript:diary_modify_view('"#{x.id}"')
+           EOS
+        %> 
+        <div style='display:table;'>
+            <div style='border: solid 1px black;width:30px;display:table-cell;vertical-align:middle'>
+                <%= link_to "#{x.id}", "#{url}" ,:target => "_blank"%>
+            </div>
+            <div style='border: solid 1px darkblue;padding:5px;display:table-cell;vertical-align:middle;width:550px'>
+                <%= "#{x.contents.slice(0,150)}"%>
+            </div>
+         </div>
+         <% end%>
+    </div>
+    <div style='border: solid 1px black;padding:2px;width:500px;height:600px;padding:30px;display:table;table-cell;vertical-align:top' id='dirary_view'>
+        <textArea id='modfiy' rows='40' cols='70'></textarea><br>
+        <input type='button' value='修正' onclick='diary_modify_update()'>
+        <input type='button' value='削除' onclick='diary_modify_delete()'>
+        <input type='hidden' value='' id='modify_id'>
+    </div>
+</div>
+<input type='hidden' value='<%= params[:rgs] %>' id='rgs'>

@@ -1,5 +1,5 @@
 ・プログラミング＞ <%= @lang_ %> <br>
-    <div style='border: solid 1px red;padding:2px;height:250px;padding:10px'>
+    <div style='border: solid 1px red;padding:2px;height:250px;padding:10px;'>
         <% @ProgrameContents[0..4].each do |x| %> 
             <p style='font-size:small;padding:0px'>
             <%= link_to "#{x.title}", "#{x.url}" ,:target => "_blank"%>
