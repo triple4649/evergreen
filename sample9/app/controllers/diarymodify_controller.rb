@@ -6,7 +6,7 @@ class DiarymodifyController< ApplicationController
     protect_from_forgery :expect  => ["create"]
     before_action :checkuser
     def show
-        @diaries = Diary.all
+        @diaries = Diary.all.order("id DESC")
     end
     
     def comfirm

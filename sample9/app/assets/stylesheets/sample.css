@@ -1,9 +1,9 @@
 ﻿.drag-and-drop {
     cursor: move;
     position: absolute;
-    z-index: 1000;
+    transform: translate3d(0,0,10px);
 }
 
 .drag {
-    z-index: 1001;
+    transform: translate3d(0,0,5px);
 }

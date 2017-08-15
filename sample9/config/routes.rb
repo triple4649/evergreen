@@ -58,6 +58,8 @@ Rails.application.routes.draw do
   root 'init#index'
   post '/showprograming/', to: 'init#showprograming'
   
+  get  '/diarydetails/show/',  to: 'diarydetails#show'
+  
   get  '/diarymodify/show/',  to: 'diarymodify#show'
   post '/diarymodify/comfirm/',  to: 'diarymodify#comfirm'
   post '/diarymodify/update/',  to: 'diarymodify#update'
