@@ -1,0 +1,37 @@
+    <div style='padding:10px;display:table-cell;vertical-align:top;width:800px;height:550px;background-color:lavender'>
+        <!--選択 -->
+        <div style='height:500px'>
+        <% @ProgrameContents[0..9].each do |x| %> 
+        <!--内容-->
+            <% url = <<-EOS
+               javascript:diarydetails_viewdetail('/diarydetails/show/details', #{x.id})
+               EOS
+            %>
+            <div style='border:solid 1px darkcyan;padding:2px;width:800px;height:35px;'>
+            <%= x.contents.slice(0,50) %> ....<%= link_to "続きを読む", url %>
+            </div>
+        <!--パディング-->
+            <div style='width:600px;height:5px;'></div>
+        <% end %> 
+        </div>
+        
+        <div>
+            <% url = <<-EOS
+               javascript:diarydetails_view('/diarydetails/showpartical/',"#{@presentpage-10}")
+               EOS
+            if (@isbefore) then %>
+                <%= link_to "＜＜前の10件", url %>
+            <% else %>
+                 ＜＜前の10件
+            <% end %>
+            <% url = <<-EOS
+               javascript:diarydetails_view('/diarydetails/showpartical/' ,"#{@presentpage+10}")
+               EOS
+            if (@isnext) then %> 
+                <%= link_to "次の10件＞＞", url %>
+            <% else %>
+                 次の10件＞＞
+            <% end %>
+        
+        </div>
+    </div>

@@ -59,6 +59,8 @@ Rails.application.routes.draw do
   post '/showprograming/', to: 'init#showprograming'
   
   get  '/diarydetails/show/',  to: 'diarydetails#show'
+  post  '/diarydetails/showpartical/',  to: 'diarydetails#showlist'
+  post  '/diarydetails/show/details/',  to: 'diarydetails#showdetails'
   
   get  '/diarymodify/show/',  to: 'diarymodify#show'
   post '/diarymodify/comfirm/',  to: 'diarymodify#comfirm'

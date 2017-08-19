@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+=begin
 ProgramContent.create(:url=>"http://qiita.com/triple4649/items/8829c5c4acbb4a2b2a2a",:title=>"Windows環境でのRubyの環境構築は時間コストがかかりすぎる",:record_type=>"ruby",:c_order=>1.1)
 ProgramContent.create(:url=>"http://qiita.com/triple4649/items/8c1caac649342d3b10a3",:title=>"Windows環境でRubyの実行環境を構築する",:record_type=>"ruby",:c_order=>1.2)
 ProgramContent.create(:url=>"http://qiita.com/triple4649/items/ecfa5e8c2604e5045e2b",:title=>"WindowsでRails環境を構築する",:record_type=>"ruby",:c_order=>1)
@@ -62,5 +63,13 @@ ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/4e4d9ea27c70
 ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/f9032b507e5a558aa949f8d3517245f6",:title=>"メソッドシグニチャと引数を抽出する",:record_type=>"javascript",:c_order=>4)
 ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/6c149958964c34bcc64dacb6210d03fe",:title=>"Javaのthrows句を抽出する",:record_type=>"javascript",:c_order=>5)
 ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/c60e35e266304bef0e06f2f3a46f71b0",:title=>"mathesの挙動",:record_type=>"javascript",:c_order=>6)
-=begin
 =end
+Diary.create(:contents=>"テスト１")
+Diary.create(:contents=>"テスト２")
+Diary.create(:contents=>"テスト３")
+Diary.create(:contents=>"テスト４")
+Diary.create(:contents=>"テスト５")
+Diary.create(:contents=>"テスト６")
+Diary.create(:contents=>"テスト７")
+Diary.create(:contents=>"テスト８")
+Diary.create(:contents=>"テスト９")

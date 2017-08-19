@@ -1,28 +1,18 @@
-<div style='width:900px;height:55px;border: solid 1px black;padding:10px;display:table'>
+<div style='width:930px;padding:10px;background-color:#5c6662'>
+    <!--header -->
+    <div style='width:900px;height:155px;padding:10px;;background-image:url(/images/8336606_917392687_85large.jpg)'>
+    <span style="font-size:xx-large;color:white;font-family:serif">最近思ったこと</span>
+    </div>
+    <!--padding -->
+    <div style='width:600px;height:5px;'></div>
+    <div style='padding:10px;display:table;margin:auto;width:870px' id='lists'>
+    <!--一覧 -->
+        <%= render :partial => "details" %>
+    </div>
 </div>
-<div style='width:600px;height:5px;'></div>
-
-<div style='border: solid 1px black;padding:10px;display:table'>
-<!--選択 -->
-
-    <div style='padding:10px;display:table-cell;vertical-align:top;width:700px'>
-        <!--選択 -->
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div style='border:solid 1px red;padding:2px;width:600px;height:75px;'></div>
-        <div style='width:600px;height:5px;'></div>
-        <div>＜＜前の10件　次の10件＞＞</div>
-    </div>
-    <div style='position: absolute;width:750px;height: 580px;top :85px;left:270px;padding:10px;border-radius: 20px;border: solid 1px blue;visibility:hidden' id='details'>
-    </div>
-
+<!--詳細 -->
+<div style='position: absolute;width:650px;height: 650px;top :45px;left:270px;background-color:white;padding:10px;border-radius: 20px;border: solid 1px blue;visibility:hidden' id='details_main'>
+    <div id='d_contents' style='height:600px'> </div>
+    <div ><a href='javascript:diarydetails_close()'>閉じる</a></div>
 </div>
 <input type='hidden' value='<%= params[:rgs] %>' id='rgs'>
