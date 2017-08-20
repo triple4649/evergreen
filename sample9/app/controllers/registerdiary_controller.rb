@@ -3,7 +3,6 @@
 # and open the template in the editor.
 require 'kramdown'
 class RegisterdiaryController< ApplicationController
-    protect_from_forgery :expect  => ["create"]
     before_action :checkuser
     
     def show

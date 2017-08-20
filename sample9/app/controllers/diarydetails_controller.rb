@@ -4,7 +4,6 @@
 require 'kramdown'
 
 class DiarydetailsController< ApplicationController
-protect_from_forgery :expect  => ["create"]
     def show
         getData
     end

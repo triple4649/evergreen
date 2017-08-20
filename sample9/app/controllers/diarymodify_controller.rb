@@ -3,7 +3,6 @@
 # and open the template in the editor.
 require 'kramdown'
 class DiarymodifyController< ApplicationController
-    protect_from_forgery :expect  => ["create"]
     before_action :checkuser
     def show
         @diaries = Diary.all.order("id DESC")

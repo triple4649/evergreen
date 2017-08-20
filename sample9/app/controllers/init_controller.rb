@@ -4,7 +4,6 @@
 require 'kramdown'
 
 class InitController< ApplicationController
-protect_from_forgery :expect  => ["create"]
     def index
          @diray_content=Kramdown::Document
          .new(Diary.last.contents)

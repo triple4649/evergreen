@@ -7,7 +7,9 @@ function commute(url, param,callbackid) {
     req.open('POST', url, true);
     req.setRequestHeader('content-type',
     'application/x-www-form-urlencoded;charset=UTF-8');
-    console.log(param)
+    //CSRF対策
+    req.setRequestHeader('X-CSRF-Token',
+    document.head.children['csrf-token'].content);
     req.send(param);
     req.onload = _r(req,
         function () { _t(callbackid, req.responseText);});
