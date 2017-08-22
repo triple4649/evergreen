@@ -69,5 +69,7 @@ Rails.application.routes.draw do
   get  '/diaryregister/show/',  to: 'registerdiary#show'
   post '/diaryregister/comfirm/',  to: 'registerdiary#comfirm'
   post '/diaryregister/register/',  to: 'registerdiary#register'
+
+  get  '/reactsample/show/',  to: 'react_sample#show'
    
 end
