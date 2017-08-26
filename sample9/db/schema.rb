@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170811111739) do
+ActiveRecord::Schema.define(version: 20170826063105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20170811111739) do
     t.decimal  "c_order",     precision: 6, scale: 3
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "tabearukis", force: :cascade do |t|
+    t.date     "visitdate"
+    t.string   "storename"
+    t.string   "location"
+    t.jsonb    "imgurl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

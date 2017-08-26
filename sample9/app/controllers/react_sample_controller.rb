@@ -4,5 +4,6 @@
 require 'kramdown'
 class ReactSampleController< ApplicationController
     def show
+        @tabearukiInfo = Tabearuki.take.to_json.html_safe
     end
 end
