@@ -4,6 +4,24 @@
 require 'kramdown'
 class ReactSampleController< ApplicationController
     def show
-        @tabearukiInfo = Tabearuki.take.to_json.html_safe
+        @tabearukiInfo = getData
     end
+
+    def tabearukis
+        @tabearukiInfo = getData
+    end
+    
+    private 
+    def getData
+        size = params[:_beforepaging].to_i
+        model=Tabearuki.all.order(visitdate: :desc)
+        .to_a().slice(size..(size+5))
+        
+        json = {:contents=>model.slice(0,5),
+         :isbefore=>(size>0),
+         :isnext=>model.length>5,
+         :presentpage=>size}.to_json
+       
+    end
+    
 end

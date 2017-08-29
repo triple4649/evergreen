@@ -70,6 +70,7 @@ Rails.application.routes.draw do
   post '/diaryregister/comfirm/',  to: 'registerdiary#comfirm'
   post '/diaryregister/register/',  to: 'registerdiary#register'
 
-  get  '/reactsample/show/',  to: 'react_sample#show'
+  get  '/reactsample/show/',           to: 'react_sample#show'
+  get '/reactsample/show/tabearukis',  to: 'react_sample#tabearukis'
    
 end

@@ -38,11 +38,5 @@ function _k(str) {
     return Object.keys(document.getElementsByTagName(str))
 }
 
-function _g() {
-    console.log(_k('input'))
-    return _k('input')
-    .filter(a=>isNaN(a))
-    .map(a=>`${a}=${_f(a)}`)
-}
 function _e(str){return document.getElementById(str)}
 
