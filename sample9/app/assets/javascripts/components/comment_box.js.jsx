@@ -103,10 +103,26 @@ var ContentForm = React.createClass({
 
 //イメージを横に並べるブロック
 var Imageblock = React.createClass({
+  getInitialState: function() {
+    return {hover:false};
+  },
+  handleHover() {
+    this.setState({hover: !this.state.hover});
+  },
   render: function() {
+    var imageStyle={
+      postion   :'absolute',
+      width     :this.state.hover ? '300px':'200px',
+      height    :this.state.hover ? '300px':'150px',
+      border    :this.state.hover ? 'none':'solid 1.5px black',
+      display   : 'inline-block',
+      background:`url(${this.props.imgurl}) no-repeat`,
+      margin:5
+    }
     return (
-      <div style={{width:'200px',height:'150px',border:'solid 1.5px black',display: 'inline-block',
-      background:`url(${this.props.imgurl}) no-repeat`,margin:5}}>
+      <div style={imageStyle} 
+      onMouseEnter={()=>this.handleHover()} 
+      onMouseLeave={()=>this.handleHover()} >
       </div>
     );
   }
