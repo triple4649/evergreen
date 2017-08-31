@@ -1,4 +1,4 @@
-・プログラミング＞ <%= @lang_ %> <br>
+<% if @lang_ != 'area' then %> ・プログラミング＞ <%= @lang_ %>  <% else  %>・地域探索 <% end %><br>
     <div style='border: solid 1px red;padding:2px;height:250px;padding:10px;'>
         <% @ProgrameContents[0..4].each do |x| %> 
             <p style='font-size:small;padding:0px'>
