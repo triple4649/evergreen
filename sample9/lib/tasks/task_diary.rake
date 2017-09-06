@@ -32,5 +32,9 @@ namespace :task_dairy do
     ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/ecdc74160301da16d9989cf5efd9d9de",
     :title=>"沖縄 那覇市 国場 真玉橋",:record_type=>"area",:c_order=>1.17)
   end
+  task :task_model_001 => :environment do
+    ProgramContent.create(:url=>"/area/show/1",
+    :title=>"沖縄 南城市 新原ビーチ",:record_type=>"area",:c_order=>1.18)
+  end
   
 end

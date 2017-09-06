@@ -58,7 +58,5 @@ namespace :task_tabearuki do
     :visitdate=>"2015/3/15",:storename=>"-",:location=>"武蔵小杉",
     :imgurl=>{url:['/images/20170829/IMG_0720.JPG','/images/20170829/IMG_0725.JPG']});
   end
-
-
   
 end

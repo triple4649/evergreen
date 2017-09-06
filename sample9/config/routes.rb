@@ -71,6 +71,8 @@ Rails.application.routes.draw do
   post '/diaryregister/register/',  to: 'registerdiary#register'
 
   get  '/reactsample/show/',           to: 'react_sample#show'
-  get '/reactsample/show/tabearukis',  to: 'react_sample#tabearukis'
+  get  '/reactsample/show/tabearukis', to: 'react_sample#tabearukis'
    
+  get  '/area/show/:areaindex',        to: 'area#show'
+
 end
