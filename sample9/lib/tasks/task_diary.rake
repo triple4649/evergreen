@@ -34,7 +34,7 @@ namespace :task_dairy do
   end
   task :task_model_001 => :environment do
     ProgramContent.create(:url=>"/area/show/1",
-    :title=>"沖縄 南城市 新原ビーチ",:record_type=>"area",:c_order=>1.18)
+    :title=>"沖縄 南城市 新原ビーチ",:record_type=>"area",:c_order=>2.00)
   end
   
 end
