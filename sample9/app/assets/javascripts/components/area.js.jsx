@@ -38,17 +38,6 @@ var Ex_Header = React.createClass({
 //記事を表示する
 var Ex_Content = React.createClass({
   render: function() {
-    console.log(this.props.data)
-    var c =  this.props.data.areapictureurls.url
-    var imageNodes=function(){
-        if(!c.map){
-           return (<Imageblock  imgurl={url} />)
-        }else{
-            return c.map(function (url){
-                return (<Imageblock  imgurl={url} />)
-            })    
-        }
-    }
     return (
       <div style={{width:750,border:'dashed 1.5px darkred',margin:10,padding:10,backgroundColor:'#ffe4e1'}}>
         ■ロケーション ： {this.props.data.location}<br/>
@@ -58,7 +47,7 @@ var Ex_Content = React.createClass({
             <span  dangerouslySetInnerHTML={{__html: this.props.data.memo}} />
         </div>
         ・写真 <br/>
-        {imageNodes()}
+        <ImageNodes imgurls ={this.props.data.areapictureurls.url} />
       </div>
     );
   }

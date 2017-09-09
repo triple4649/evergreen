@@ -16,5 +16,22 @@ namespace :task_area do
                     ]
               });
   end
+  task :task_model_001 => :environment do
+    Area.create(
+        :visitdate=>"2008/3/29",
+        :location=>"埼玉県 さいたま市 大宮公園",
+        :memo=>"<p>たまたま桜が満開の時期に行った。</p>
+        <p>桜の花が高いところに咲いていて、とても見ごたえがあった</p>",
+        :areapictureurls=>{url:[
+                    '/images/area/20170907/CA390053.JPG',
+                    '/images/area/20170907/CA390054.JPG',
+                    '/images/area/20170907/CA390062.JPG',
+                    '/images/area/20170907/CA390066.JPG',
+                    '/images/area/20170907/CA390067.JPG',
+                    '/images/area/20170907/CA390068.JPG',
+                    '/images/area/20170907/CA390070.JPG'
+                    ]
+              });
+  end
   
 end

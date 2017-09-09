@@ -1,9 +1,16 @@
+function closeView(str){_e(str).style.visibility = "hidden";}
+function view(path,lang,str,paging){
+    doPost(path,`lang=${lang}&_beforepaging=${paging}`,'programing')
+    _e(str).style.top = `${window.innerHeight/4}px`;
+    _e(str).style.left = `${window.innerHeight/4}px`;
+    _e(str).style.visibility = "visible";
+    divmove()
+}
 function _g() {
     return _k('input')
     .filter(a=>isNaN(a))
     .map(a=>`${a}=${_f(a)}`)
 }
-
 var CommentBox = React.createClass({
     handleFooterLinkClicked:function (param){
       $.ajax({
@@ -28,12 +35,13 @@ var CommentBox = React.createClass({
     getInitialState: function() {
       return {data: JSON.parse(this.props.data)};
     },
+    
     render: function() {
        //serverからのパラメータを取得する
-       console.log()
        var serverparams = this.state.data;
+       
        return(
-         <div className="commentBox">
+         <div className="commentBox" >
            <HeaderList  headerimg='/images/foods.jpg'/>
            <div style={{height:5}}/>
            <ContentList data={serverparams.contents}/>
@@ -68,62 +76,91 @@ var ContentList = React.createClass({
         }
     )
     return (
-      <div style={{width:800,margin:10,padding:10,}}>
+      <div style={{width:800,margin:10,padding:10}}>
         {contentNodes}
       </div>
     );
   }
 });
 
-
 //記事を表示する
 var ContentForm = React.createClass({
   render: function() {
-    var c =  this.props.data.imgurl.url
-    var imageNodes=function(){
-        if(!c.map){
-           return (<Imageblock  imgurl={url} />)
-        }else{
-            return c.map(function (url){
-                return (<Imageblock  imgurl={url} />)
-            })    
-        }
-    }
     return (
       <div style={{width:750,height:270,border:'dashed 1.5px darkred',margin:10,padding:10,backgroundColor:'#ffe4e1'}}>
         ・日時 {this.props.data.visitdate}<br/>
         ・店名 {this.props.data.storename}<br/>
         ・場所 {this.props.data.location}<br/>
         ・写真 <br/>
-        {imageNodes()}
+        <ImageNodes imgurls ={this.props.data.imgurl.url} />
       </div>
     );
   }
 });
-
 //イメージを横に並べるブロック
+var ImageNodes = React.createClass({
+   render: function() {
+     var c =  this.props.imgurls
+     var imageNodes=function(){
+         if(!c.map){
+            return (<Imageblock  imgurl={c.url} />)
+         }else{
+             return c.map(function (url){
+                 return (<Imageblock  imgurl={url} />)
+             })    
+         }
+     }
+     return (
+        <div>
+            {imageNodes()}
+        </div>   
+    );
+  }
+});
+
+//イメージを表示するブロック
+var imageindex=0;
 var Imageblock = React.createClass({
   getInitialState: function() {
     return {hover:false};
   },
-  handleHover() {
-    this.setState({hover: !this.state.hover});
+  handleHover(index,isDisplay) {
+    var imgref = this.refs[index]
+    this.setState({topPosition:`${React.findDOMNode(imgref).offsetTop}px`})
+    this.setState({leftPosition:`${React.findDOMNode(imgref).offsetLeft}px`})
+    this.setState({hover: isDisplay});
   },
   render: function() {
+    var index = imageindex++;
     var imageStyle={
-      postion   :'absolute',
-      width     :this.state.hover ? '300px':'200px',
-      height    :this.state.hover ? '300px':'150px',
-      border    :this.state.hover ? 'none':'solid 1.5px black',
-      display   : 'inline-block',
+      position  :'relative',
+      width     :'200px',
+      height    :'150px',
+      border    :'solid 1.5px black',
       background:`url(${this.props.imgurl}) no-repeat`,
       margin:5
     }
+    var myimagedivindex=`myImage${index}` 
+    var imgdisplay={
+        position        : 'absolute',
+        display         : this.state.hover ? 'block':'none',
+        top             : this.state.topPosition,
+        left            : this.state.leftPosition,
+        width           : 300,
+        height          : 300,
+        zIndex          : 10,
+        backgroundColor : 'white'
+    }
     return (
-      <div style={imageStyle} 
-      onMouseEnter={()=>this.handleHover()} 
-      onMouseLeave={()=>this.handleHover()} >
-      </div>
+       <div style={{display:'inline-block'}}>
+           <div style={imageStyle} 
+               onClick={()=>this.handleHover(myimagedivindex,true)} 
+               ref={myimagedivindex}>
+           </div>
+           <div style={imgdisplay} onClick={()=>this.handleHover(myimagedivindex,false)}>
+               <img src={this.props.imgurl} />
+           </div>
+       </div>
     );
   }
 });
@@ -155,7 +192,6 @@ var MyFooter = React.createClass({
 var MyNavigation = React.createClass({
   handleClick:function(e){
     e.preventDefault();
-    console.log('クリックされました')
     var pagesize =this.props.pagesize
     this.props.onCommentSubmit(pagesize)
   },

@@ -36,5 +36,9 @@ namespace :task_dairy do
     ProgramContent.create(:url=>"/area/show/1",
     :title=>"沖縄 南城市 新原ビーチ",:record_type=>"area",:c_order=>2.00)
   end
+  task :task_model_002 => :environment do
+    ProgramContent.create(:url=>"/area/show/2",
+    :title=>"埼玉県 さいたま市 大宮公園",:record_type=>"area",:c_order=>1.40)
+  end
   
 end
