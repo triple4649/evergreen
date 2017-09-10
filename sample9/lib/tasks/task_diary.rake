@@ -40,5 +40,13 @@ namespace :task_dairy do
     ProgramContent.create(:url=>"/area/show/2",
     :title=>"埼玉県 さいたま市 大宮公園",:record_type=>"area",:c_order=>1.40)
   end
+  task :task_model_003 => :environment do
+    ProgramContent.create(:url=>"/area/show/3",
+    :title=>"東京都 西荻窪～吉祥寺",:record_type=>"area",:c_order=>1.50)
+  end
+  task :task_model_004 => :environment do
+    ProgramContent.create(:url=>"/area/show/4",
+    :title=>"横浜市 横浜駅～日吉",:record_type=>"area",:c_order=>1.49)
+  end
   
 end

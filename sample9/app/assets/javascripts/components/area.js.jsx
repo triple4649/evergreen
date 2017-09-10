@@ -21,7 +21,7 @@ var AreaBox = React.createClass({
 var Ex_Header = React.createClass({
   render: function() {
     return (
-    <div style={{width:850,height:250,border:'solid 1px black',backgroundColor:'#2f4f4f',padding:10}}>
+    <div style={{width:850,border:'solid 1px black',backgroundColor:'#2f4f4f',padding:10,position:'fixed',zIndex:10,top:0}}>
       <div><span style={{fontSize:'xx-large',color:'white'}}>地域探訪</span></div>
       <div style={{display:'flex',justifyContent:'space-between'}}>
         <div><img src={this.props.headerimg_1} height='200px'/></div>
@@ -39,7 +39,7 @@ var Ex_Header = React.createClass({
 var Ex_Content = React.createClass({
   render: function() {
     return (
-      <div style={{width:750,border:'dashed 1.5px darkred',margin:10,padding:10,backgroundColor:'#ffe4e1'}}>
+      <div style={{width:750,border:'dashed 1.5px darkred',margin:10,padding:10,backgroundColor:'#ffe4e1',position:'relative',top:270}}>
         ■ロケーション ： {this.props.data.location}<br/>
         ■日時 ：{this.props.data.visitdate} <br/>
         ■メモ 

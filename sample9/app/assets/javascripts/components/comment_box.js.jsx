@@ -43,7 +43,6 @@ var CommentBox = React.createClass({
        return(
          <div className="commentBox" >
            <HeaderList  headerimg='/images/foods.jpg'/>
-           <div style={{height:5}}/>
            <ContentList data={serverparams.contents}/>
            <MyFooter 
            footerimg='/images/background/images.jpg' 
@@ -57,7 +56,7 @@ var CommentBox = React.createClass({
 var HeaderList = React.createClass({
   render: function() {
     return (
-      <div style={{width:850,height:200,background:`url(${this.props.headerimg})`,border:'solid 1px black'}}>
+      <div style={{width:850,height:200,background:`url(${this.props.headerimg})`,border:'solid 1px black',position:'fixed',zIndex:10,top:0}}>
         <span style={{fontSize:'xx-large',color:'white'}}>ぺろーりさん食べ歩き日記</span>
       </div>
     );
@@ -76,7 +75,7 @@ var ContentList = React.createClass({
         }
     )
     return (
-      <div style={{width:800,margin:10,padding:10}}>
+      <div style={{width:800,margin:10,padding:10,position:'relative',top:190}}>
         {contentNodes}
       </div>
     );
@@ -91,7 +90,7 @@ var ContentForm = React.createClass({
         ・日時 {this.props.data.visitdate}<br/>
         ・店名 {this.props.data.storename}<br/>
         ・場所 {this.props.data.location}<br/>
-        ・写真 <br/>
+        ・写真 (クリックすると拡大された写真が表示されます）<br/>
         <ImageNodes imgurls ={this.props.data.imgurl.url} />
       </div>
     );
@@ -146,8 +145,6 @@ var Imageblock = React.createClass({
         display         : this.state.hover ? 'block':'none',
         top             : this.state.topPosition,
         left            : this.state.leftPosition,
-        width           : 300,
-        height          : 300,
         zIndex          : 10,
         backgroundColor : 'white'
     }
@@ -171,7 +168,7 @@ var MyFooter = React.createClass({
     var parentParams =this.props.data
     
     return (
-      <div style={{width:800,background:`url(${this.props.footerimg})`,margin:10,padding:10,}}>
+      <div style={{width:800,background:`url(${this.props.footerimg})`,margin:10,padding:10,position:'relative',top:170,zIndex:10}}>
         <MyNavigation 
         navigationtext='＜＜前へ'  
         isactive={parentParams.isbefore} 
