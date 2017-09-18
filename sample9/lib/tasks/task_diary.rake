@@ -1,5 +1,13 @@
 namespace :task_dairy do
   desc "task_diary_use_model"
+  task :task_model_002 => :environment do
+    ProgramContent.create(
+    :url=>"http://qiita.com/triple4649/private/76df566abb6314eca666",
+    :title=>"情報処理　安全確保支援士 キーワードチェーン 1",
+    :record_type=>"SC",:c_order=>1.05)
+  end
+  
+  
   task :task_model => :environment do
     ProgramContent.create(:url=>"http://blog.goo.ne.jp/evergreen_1978/e/c1c9880512c7d732070d6a999c8ea210",
     :title=>"横浜 磯子区 岡村天満宮",:record_type=>"area",:c_order=>1.01)

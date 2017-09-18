@@ -1,5 +1,28 @@
 namespace :task_tabearuki do
   desc "task_tabearuki_use_model"
+  task :task_model_004 => :environment do
+    Tabearuki.create(
+    :visitdate=>"2017/9/05",
+    :storename=>"実家",
+    :location=>"沖縄県 那覇市",
+    :imgurl=>{url:[
+                    '/images/tabearuki/001/3f02bd228a4f9b07-photo.jpeg',
+                    '/images/tabearuki/001/ddaba05200020969-photo.jpeg',
+                    '/images/tabearuki/001/e2ba6a13e6be64eb-photo.jpeg'
+                  ]
+              });
+    Tabearuki.create(
+    :visitdate=>"2017/9/03",
+    :storename=>"ハート＆ベリー",
+    :location=>"沖縄県 那覇市 牧志 公設市場",
+    :imgurl=>{url:[
+                    '/images/tabearuki/002/076782a4f31e5fa0-photo.jpeg',
+                    '/images/tabearuki/002/04be9da45a7de157-photo.jpeg'
+                  ]
+              });
+    
+  end
+  
   task :task_model => :environment do
     Tabearuki.create(
     :visitdate=>"2017/6/16",
