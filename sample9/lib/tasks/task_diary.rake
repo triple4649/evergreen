@@ -1,8 +1,19 @@
 namespace :task_dairy do
   desc "task_diary_use_model"
-  task :task_model_002 => :environment do
+  task :task_model_006 => :environment do
     ProgramContent.create(
     :url=>"http://qiita.com/triple4649/private/76df566abb6314eca666",
+    :title=>"情報処理　安全確保支援士 キーワードチェーン 2",
+    :record_type=>"SC",:c_order=>1.06)
+    ProgramContent.create(
+    :url=>"http://qiita.com/triple4649/private/b53fe3f3576ce7de2779	",
+    :title=>"情報処理　安全確保支援士 キーワードチェーン 3",
+    :record_type=>"SC",:c_order=>1.07)
+  end
+
+  task :task_model_005 => :environment do
+    ProgramContent.create(
+    :url=>"http://qiita.com/triple4649/private/76967469f8146ed3b1d9",
     :title=>"情報処理　安全確保支援士 キーワードチェーン 1",
     :record_type=>"SC",:c_order=>1.05)
   end

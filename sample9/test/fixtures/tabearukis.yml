@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visitdate: 2017-08-26
+  storename: MyString
+  location: MyString
+  imgurl1: MyText
+  imgurl2: MyText
+  imgurl3: MyText
+
+two:
+  visitdate: 2017-08-26
+  storename: MyString
+  location: MyString
+  imgurl1: MyText
+  imgurl2: MyText
+  imgurl3: MyText
