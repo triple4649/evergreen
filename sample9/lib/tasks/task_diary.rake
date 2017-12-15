@@ -1,5 +1,28 @@
 namespace :task_dairy do
   desc "task_diary_use_model"
+  task :task_model_007 => :environment do
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/af44ee9eb0ca2cd470fb",
+    :title=>"javaのpublicメソッドを抽出してみる",
+    :record_type=>"java",:c_order=>3.42)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/7bbeb950545d25334355",
+    :title=>"Java:ディレクトリを渡り歩く",
+    :record_type=>"java",:c_order=>3.43)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/53c22fa9db011bff44c9",
+    :title=>"EclipseLinkをつかってDBプログラミングをする part1",
+    :record_type=>"java",:c_order=>3.43)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/722553d222b2c4f8a168",
+    :title=>"phpでスクライピングをやってみたが・・・・",
+    :record_type=>"PHP",:c_order=>1.110)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649",
+    :title=>"phpでスクライピングをやってみた part2",
+    :record_type=>"PHP",:c_order=>1.111)
+  end
+  
   task :task_model_006 => :environment do
     ProgramContent.create(
     :url=>"http://qiita.com/triple4649/private/76df566abb6314eca666",
