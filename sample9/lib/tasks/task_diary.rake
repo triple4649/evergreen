@@ -142,4 +142,5 @@ namespace :task_dairy do
     :title=>"JavaScript:クリップボートのイメージをBase64変換する",
     :record_type=>"javascript",
     :c_order=>7.01)
+  end
 end
