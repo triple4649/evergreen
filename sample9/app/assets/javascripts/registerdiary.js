@@ -4,7 +4,7 @@ function add_str(name){
         add_header:'#',
         add_kaigyo:'\n',
         add_url:'[]()',
-        add_haifun:'-',
+        add_haifun:' - ',
         add_underbar:'_',
         add_quout:'~~~',
         add_date:function (){
