@@ -18,14 +18,21 @@ h1, h2, h3, h4{
 font-size: 15px;
 }
 </style>
-<div style='position: absolute;width:1100px;top :0px;left:5px;display: table;padding:20px'>
-    <div style='display: table-cell;width:500px;height:600px;border: solid 1px blue;top :10px;padding:30px;margin:10px'>
-        <textarea id="diary" rows="40" cols="70"></textarea><br>
+<div style='position: absolute;width:1200px;top :0px;left:5px;display: table;padding:20px'>
+    <div style='display: table-cell;width:400px;height:600px;border: solid 1px blue;top :10px;padding:30px;margin:10px'>
+        <input type = 'button' name='add_header' value='#' onclick='add_str(this.name)'>
+        <input type = 'button' name='add_date' value='日付'  onclick='add_str(this.name)'>
+        <input type = 'button' name='add_haifun' value='-' onclick='add_str(this.name)'>
+        <input type = 'button' name='add_underbar' value='_' onclick='add_str(this.name)'>
+        <input type = 'button' name='add_kaigyo' value='改行'  onclick='add_str(this.name)'>
+        <input type = 'button' name='add_url' value='URL'  onclick='add_str(this.name)'>
+        <input type = 'button' name='add_quout' value='~~~'  onclick='add_str(this.name)'>
+        <textarea id="diary" rows="30" cols="70"></textarea><br>
         <input type='button' value='確認' onclick='comfirm_content()'>
     </div>
 
-    <div style='display: table-cell;vertical-align: top;width:800px;padding:30px'>
-        <div style='display: table-cell;vertical-align: top;width:750px;height: 480px;
+    <div style='display: table-cell;vertical-align: top;width:600px;padding:30px'>
+        <div style='display: table-cell;vertical-align: top;width:550px;height: 480px;
         padding:10px;border-radius: 20px;border: solid 1px blue;' id='programing'>
         </div>
         <input type='button' value='登録' onclick='register()'>

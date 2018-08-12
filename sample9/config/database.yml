@@ -11,10 +11,11 @@ development:
   adapter: postgresql
   host: localhost
   encoding: utf8
-  database: tripple_db
+  database: triple
   pool: 5
-  username: postgres
-  password: evergreen
+  username: triple
+  password: triple4649
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
