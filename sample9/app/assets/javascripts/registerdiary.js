@@ -3,7 +3,7 @@ function add_str(name){
     var obj ={
         add_header:'#',
         add_kaigyo:'\n',
-        add_url:'()[]',
+        add_url:'[]()',
         add_haifun:'-',
         add_underbar:'_',
         add_quout:'~~~',
