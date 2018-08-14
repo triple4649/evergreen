@@ -143,4 +143,34 @@ namespace :task_dairy do
     :record_type=>"javascript",
     :c_order=>7.01)
   end
+  task :task_model_008 => :environment do
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/584e60604238a95fa333",
+    :title=>"Rails ExecJSのエラーについて",
+    :record_type=>"ruby",:c_order=>3)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/e2f008f287ba2f3e7079",
+    :title=>"JavaでPDFファイルをOCR処理してみた part2",
+    :record_type=>"java",:c_order=>4)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/39f34180b7bdf768bb3d",
+    :title=>"Java 文字列の操作",
+    :record_type=>"java",:c_order=>4.1)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/4691805778a250f5255b",
+    :title=>"Python:FlaskとPostgreSQLとDockerでウェブアプリを作る",
+    :record_type=>"Python",:c_order=>1)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/d8c615454e7367846f87",
+    :title=>"Java:WASをDockerで起動させ、自前のアプリケーションをデプロイする",
+    :record_type=>"java",:c_order=>4.3)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/53c86d60946a09212a0b",
+    :title=>"docker上のWASとFLASKのアプリケーションを連動させる",
+    :record_type=>"java",:c_order=>4.4)
+    ProgramContent.create(
+    :url=>"https://qiita.com/triple4649/items/5b1bb680bf8d27dadf43",
+    :title=>"Oracle12cでimpdb,expdbコマンドを実行する",
+    :record_type=>"Oracle",:c_order=>1)    
+  end
 end
