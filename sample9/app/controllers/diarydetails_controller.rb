@@ -12,6 +12,13 @@ class DiarydetailsController< ApplicationController
         getData
     end
     
+
+    def showdetails2
+        @content= Kramdown::Document
+         .new(Diary.find(params[:id].to_i).contents)
+         .to_html.html_safe
+    end
+
     def showdetails
         render html:Kramdown::Document
          .new(Diary.find(params[:id].to_i).contents)
