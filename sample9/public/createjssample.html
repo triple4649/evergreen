@@ -1,0 +1,181 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/base.css" />
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script>
+    //Canvasに対する各種イベント処理を管理するオブジェクト
+    var myCanvasHander
+    //Canvasに対する各種イベント処理の追加、削除を管理するオブジェクト定義します
+    var sOpe  
+    //オブジェクトのリサイズの可否を管理するフラグです
+    var isResize = false
+    //オブジェクトのリサイズ時に一度、イベントハンドラの処理を行ったら
+    //それ以降イベントハンドラの追加処理を抑止するためのフラグです
+    var isChangeEvent = false
+    
+    function MyCanvasHander(mystage){
+        //CreateJsのStageオブジェクト
+        var lstage = mystage
+        var dragPointX
+        var dragPointY
+        var myshape
+        var mouseclickflag
+        var firstmove
+        
+        this.handleDown = function(e) {
+            // ドラッグを開始した座標を覚えておく
+            var rect = e.target.getBoundingClientRect();
+            dragPointX = e.clientX - rect.left;
+            dragPointY = e.clientY - rect.top;
+            mouseclickflag =true
+            firstmove = true;
+        }
+        this.handleMousemove = function(e){
+            if(!mouseclickflag)return
+            //mouseDownイベント後の初回のMoveイベント時は前のshapeは削除しない
+            if(!firstmove && myshape && myshape.shape){
+                lstage.removeChild(myshape.shape)
+            }
+            firstmove = false
+            var rect = e.target.getBoundingClientRect();
+            //四角形のオブジェクトを生成する
+            myshape = new Rectengle(
+                dragPointX,
+                dragPointY,
+                e.clientX - rect.left-dragPointX,
+                e.clientY - rect.top-dragPointY,
+                "Yellow")
+            myshape.init(lstage)
+            myshape.shape.alpha = 0.5;
+        }
+        this.handleMouseup = function(e){
+            myshape.shape.alpha = 1.0;
+            mouseclickflag =false
+        }
+    }
+    
+    function ShapeOperationToCanvas(myCanvasHander){
+        //Canvasに対する各種イベントの定義を行います
+        var funcs ={
+            mousedown:{handleDown:myCanvasHander.handleDown},
+            mousemove:{handleMousemove:myCanvasHander.handleMousemove},
+            mouseup:{handleMouseup:myCanvasHander.handleMouseup}
+        }
+        //Canvasに対する各種イベントを追加します
+        this.addOperation = function(){
+            var canvas = document.getElementById('myCanvas');
+            canvas.addEventListener('mousedown', funcs['mousedown']['handleDown'], false);
+            canvas.addEventListener('mousemove', funcs['mousemove']['handleMousemove'], false);
+            canvas.addEventListener('mouseup', funcs['mouseup']['handleMouseup'], false);
+        }
+        //Canvasに対する各種イベントを削除します
+        this.removeOperation = function (){
+            var canvas = document.getElementById('myCanvas');
+            canvas.removeEventListener('mousedown', funcs['mousedown']['handleDown']);
+            canvas.removeEventListener('mousemove', funcs['mousemove']['handleMousemove']);
+            canvas.removeEventListener('mouseup', funcs['mouseup']['handleMouseup']);
+        }
+    }
+    
+    // ページの読み込みが終わってから初期化
+    window.addEventListener("load", init);
+    function init() {
+        //Stageの生成とキャンバスに対する操作は
+        //画面のロード完了後、実行する
+        myCanvasHander= new MyCanvasHander(new createjs.Stage("myCanvas"))
+        sOpe = new ShapeOperationToCanvas(myCanvasHander)
+    }
+    
+    function Rectengle(start_x,start_y,end_x,end_y,color){
+        this.width=end_x-start_x
+        this.height=end_y-start_y
+        this.color=color
+        this.start_x=start_x
+        this.start_y=start_y
+        this.end_x=end_x
+        this.end_y=end_y
+        this.shape
+        
+        this.init = function(stage){
+            // 初期化
+            //　図形を作成
+            this.shape = new createjs.Shape();
+            stage.addChild(this.shape);
+            this.shape.graphics.beginFill(color)
+            .drawRect(this.start_x,this.start_y,this.end_x,this.end_y);
+            // ドラッグした場所を保存する変数
+            var dragPointX;
+            var dragPointY;
+            // インタラクティブの設定 drawShape
+            this.shape.addEventListener("mousedown", handleDown);
+            this.shape.addEventListener("pressmove", handleMove);
+            this.shape.addEventListener("pressup", handleUp);
+            stage.update()
+            var _self = this;
+            // 図形を押したときの処理です
+            function handleDown(event) {
+              sOpe.removeOperation()
+              // ドラッグを開始した座標を覚えておく
+              dragPointX = stage.mouseX - _self.shape.x;
+              dragPointY = stage.mouseY - _self.shape.y;
+              // ボールを半透明にする
+              _self.shape.alpha = 0.3;
+              if(!isChangeEvent&&isResize){
+                  _self.shape.addEventListener("pressmove", handleMoveOnResizing);
+                  _self.shape.removeEventListener("pressmove", handleMove);
+              }else if(!isResize){
+                  _self.shape.addEventListener("pressmove", handleMove);
+                  _self.shape.removeEventListener("pressmove", handleMoveOnResizing);
+              }
+            }
+            // 図形を押した状態で動かしたときの処理です(オブジェクトの移動)
+            function handleMove(event) {
+              // ボールはマウス座標に追随する
+              // ただしドラッグ開始地点との補正をいれておく
+              _self.shape.x = stage.mouseX - dragPointX;
+              _self.shape.y = stage.mouseY - dragPointY;
+            }
+            // 図形を押した状態で動かしたときの処理です(オブジェクトのリサイズ)
+            function handleMoveOnResizing(event) {
+                //いったん、描画したオブジェクトを消す
+                 _self.shape.graphics.clear().beginFill(_self.color)
+                .drawRect(
+                    _self.start_x,
+                    _self.start_y,
+                    stage.mouseX,
+                    stage.mouseY);
+            }
+            // ボールからマウスを離したときの処理です
+            function handleUp(event) {
+              // ボールを元の透明度に戻す
+              _self.shape.alpha = 1.0;
+            }
+            // 時間経過
+            createjs.Ticker.addEventListener("tick", handleTick);
+            function handleTick() {
+                stage.update(); // 画面更新
+            }
+        }
+        
+    }
+    
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="300"></canvas><br>
+  <input type = button  value = "図形追加 ON" onclick="sOpe.addOperation();isResize=false">
+  <input type = button  value = "図形追加 OFF" onclick="sOpe.removeOperation();isResize=false">
+  <input type = button  value = "図形リサイズ ON" onclick="isResize=true">
+  <input type = button  value = "図形リサイズ OFF" onclick="isResize=false;isChangeEvent=false"><br>
+  
+  <h1 id="-">使い方</h1>
+<ul>
+<li>図形追加ボタン ONを押したとき<br>マウスの動きの合わせて図形が追加できます<br>この時、Cavasに追加オブジェクトを移動させたり、リサイズしたりはできません    </li>
+<li>図形追加ボタン OFFを押したとき<br>図形追加モードが解除され、追加したイメージの移動ができるようになります    </li>
+<li>図形リサイズON ボタンを押したとき<br>Canvasに追加したイメージをリサイズすることができます。<br>この時、イメージの移動はできません</li>
+<li>図形リサイズOFFボタンを押したとき<br>Canvasに追加したイメージを移動できるようになります</li>
+</ul>
+
+</body>
+</html>
