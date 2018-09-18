@@ -116,11 +116,6 @@
             // 図形を押したときの処理です
             function handleDown(event) {
               sOpe.removeOperation()
-              // ドラッグを開始した座標を覚えておく
-              dragPointX = stage.mouseX - _self.shape.x;
-              dragPointY = stage.mouseY - _self.shape.y;
-              // ボールを半透明にする
-              _self.shape.alpha = 0.3;
               if(!isChangeEvent&&isResize){
                   _self.shape.addEventListener("pressmove", handleMoveOnResizing);
                   _self.shape.removeEventListener("pressmove", handleMove);
@@ -128,6 +123,11 @@
                   _self.shape.addEventListener("pressmove", handleMove);
                   _self.shape.removeEventListener("pressmove", handleMoveOnResizing);
               }
+              // ドラッグを開始した座標を覚えておく
+              dragPointX = stage.mouseX - _self.shape.x;
+              dragPointY = stage.mouseY - _self.shape.y;
+              // ボールを半透明にする
+              _self.shape.alpha = 0.3;
             }
             // 図形を押した状態で動かしたときの処理です(オブジェクトの移動)
             function handleMove(event) {
@@ -143,8 +143,8 @@
                 .drawRect(
                     _self.start_x,
                     _self.start_y,
-                    stage.mouseX,
-                    stage.mouseY);
+                    stage.mouseX-_self.start_x ,
+                    stage.mouseY-_self.start_y );
             }
             // ボールからマウスを離したときの処理です
             function handleUp(event) {
