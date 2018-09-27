@@ -13,6 +13,8 @@
     //オブジェクトのリサイズ時に一度、イベントハンドラの処理を行ったら
     //それ以降イベントハンドラの追加処理を抑止するためのフラグです
     var isChangeEvent = false
+    // ページの読み込みが終わってから初期化
+    window.addEventListener("load", init);
     
     function MyCanvasHander(mystage){
         //CreateJsのStageオブジェクト
@@ -79,8 +81,6 @@
             canvas.removeEventListener('mouseup', funcs['mouseup']['handleMouseup']);
         }
     }
-    // ページの読み込みが終わってから初期化
-    window.addEventListener("load", init);
     function init() {
         //Stageの生成とキャンバスに対する操作は
         //画面のロード完了後、実行する
@@ -94,6 +94,7 @@
           // Stageの描画を更新します
           myCanvasHander.stage.update();
         });    
+        allocateMyStyle();
       }
     
     function Rectangle(start_x,start_y,width,height,color){
@@ -201,6 +202,48 @@
         helpWindow = document.getElementById('helpWindow')
         .style.visibility = "hidden"
     }
+    function ShadowStyle(){
+        this.swichflag = 1
+        this.oldColor; 
+        this.changeStyle=function(button,call,call1){
+            this.swichflag=this.swichflag*-1
+            if(this.swichflag==1){
+                this.oldColor = button.style.backgroundColor
+                call()
+                button.style.backgroundColor = 'gray'
+            }else{
+                call1()
+                button.style.backgroundColor = this.oldColor
+            }
+        }
+    }
+    function allocateMyStyle(){
+        var  buttons = document.getElementsByClassName('myshadow')
+        if(buttons.length){
+            for(var i = 0;i<buttons.length;i++){
+                buttons[i].myStyle=new ShadowStyle()
+            }
+        }else{
+            buttons.myStyle=new ShadowStyle()
+        }
+    
+    }
+    function g(){
+        sOpe.addOperation();
+        isResize=false
+    }
+    function g1(){
+        sOpe.removeOperation();i
+        =false
+    }
+    function f(){
+        isResize=true
+    }
+    function f1(){
+        isResize=false;
+        isChangeEvent=false
+    }
+    
   </script>
 </head>
 <body style='overflow:hidden'>
@@ -213,10 +256,8 @@
         <div style='padding:5px'>
             <div style='display: flex;flex-direction: column;'>
                 <input type = button  value = "使い方" onclick="openHelpWindow()">
-                <input type = button  value = "図形追加 ON" onclick="sOpe.addOperation();isResize=false">
-                <input type = button  value = "図形追加 OFF" onclick="sOpe.removeOperation();isResize=false">
-                <input type = button  value = "図形リサイズ ON" onclick="isResize=true">
-                <input type = button  value = "図形リサイズ OFF" onclick="isResize=false;isChangeEvent=false"><br><br>
+                <input class ='myshadow' type = button  value = "図形追加" onclick="this.myStyle.changeStyle(this,g,g1);">
+                <input class ='myshadow' type = button  value = "リサイズ" onclick="this.myStyle.changeStyle(this,f,f1);">
             </div>
         </div>
         <div style='padding:5px'>
